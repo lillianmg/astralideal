@@ -77,7 +77,14 @@ footer{background:var(--void);border-top:1px solid rgba(201,160,60,.1);padding:4
 
 @keyframes fadeUp{to{opacity:1;transform:translateY(0);}}
 @media(max-width:900px){nav{padding:1.2rem 2rem;}.nav-links{gap:1.5rem;}.privacy-grid{grid-template-columns:1fr;}.container{padding:0 1.5rem;}.page-main{padding:3rem 0 5rem;}.privacy-block-inner{padding:2rem;}}
-@media(max-width:600px){.nav-links{display:none;}.footer-bottom{flex-direction:column;align-items:flex-start;}}
+@media(max-width:600px){.footer-bottom{flex-direction:column;align-items:flex-start;}}
+/* HAMBURGER */
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:200;}
+.hamburger span{display:block;width:24px;height:1.5px;background:var(--gold-light);transition:transform .3s,opacity .3s;}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+@media(max-width:600px){.hamburger{display:flex;}.nav-links{display:flex !important;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(4,10,6,.97);backdrop-filter:blur(20px);align-items:center;justify-content:center;gap:2.5rem;transform:translateX(100%);transition:transform .4s ease;z-index:150;}.nav-links.open{transform:translateX(0);}.nav-links a{font-size:1rem;letter-spacing:.2em;}}
 </style>
 </head>
 <body>
@@ -86,12 +93,13 @@ footer{background:var(--void);border-top:1px solid rgba(201,160,60,.1);padding:4
 
 <nav>
   <a href="index.html" class="nav-logo">Astral<span>Ideal</span></a>
-  <ul class="nav-links">
-    <li><a href="index.html#about">About Me</a></li>
-    <li><a href="index.html#for-you">For You</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-    <li><a href="terms.html">Our Terms</a></li>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html#about" onclick="closeMenu()">About Me</a></li>
+    <li><a href="index.html#for-you" onclick="closeMenu()">For You</a></li>
+    <li><a href="contact.html" onclick="closeMenu()">Contact Us</a></li>
+    <li><a href="terms.html" onclick="closeMenu()">Our Terms</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
 </nav>
 
 <div class="page-banner">
@@ -150,14 +158,16 @@ footer{background:var(--void);border-top:1px solid rgba(201,160,60,.1);padding:4
       <p class="footer-copy">© <span id="yr"></span> AstralIdeal · For entertainment &amp; personal reflection · Not a licensed professional service</p>
       <div class="footer-legal">
         <a href="index.html">Home</a>
-        <a href="terms.html">Our Terms</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="terms.html" onclick="closeMenu()">Our Terms</a>
+        <a href="contact.html" onclick="closeMenu()">Contact Us</a>
       </div>
     </div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">function toggleMenu(){document.getElementById("hamburger").classList.toggle("open");document.getElementById("nav-links").classList.toggle("open");}
+function closeMenu(){document.getElementById("hamburger").classList.remove("open");document.getElementById("nav-links").classList.remove("open");}
+</script><script>
 (function(){
   const bg = document.getElementById('stars-bg');
   for (let i = 0; i < 160; i++) {

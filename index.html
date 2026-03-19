@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AstralIdeal · Find Your Compass</title>
+<title>AstralIdeal · Find Your Compass Through the Stars</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,19 +125,35 @@ footer{background:var(--void);border-top:1px solid rgba(201,160,60,.1);padding:5
 .reveal-d1{transition-delay:.15s;}.reveal-d2{transition-delay:.3s;}.reveal-d3{transition-delay:.45s;}
 
 @media(max-width:900px){nav{padding:1.2rem 2rem;}.nav-links{gap:1.5rem;}.about-grid{grid-template-columns:1fr;gap:3rem;}.about-sigil{display:none;}.services-grid{grid-template-columns:1fr;}.footer-top{grid-template-columns:1fr;gap:3rem;}.privacy-grid{grid-template-columns:1fr;}.container{padding:0 1.5rem;}section{padding:5rem 0;}}
-@media(max-width:600px){.nav-links{display:none;}.footer-top{grid-template-columns:1fr;}.footer-bottom{flex-direction:column;align-items:flex-start;}}
+@media(max-width:600px){.footer-top{grid-template-columns:1fr;}.footer-bottom{flex-direction:column;align-items:flex-start;}}
+
+/* HAMBURGER */
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:200;}
+.hamburger span{display:block;width:24px;height:1.5px;background:var(--gold-light);transition:transform .3s,opacity .3s;}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+@media(max-width:600px){
+  .hamburger{display:flex;}
+  .nav-links{display:flex;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(4,10,6,.97);backdrop-filter:blur(20px);align-items:center;justify-content:center;gap:2.5rem;transform:translateX(100%);transition:transform .4s ease;z-index:150;}
+  .nav-links.open{transform:translateX(0);}
+  .nav-links a{font-size:1rem;letter-spacing:.2em;}
+}
 </style>
 </head>
 <body>
 
 <nav id="nav">
   <a href="index.html" class="nav-logo">Astral<span>Ideal</span></a>
-  <ul class="nav-links">
-    <li><a href="#about">About Me</a></li>
-    <li><a href="#for-you">For You</a></li>
-    <li><a href="contact.html">Contact Us</a></li>
-    <li><a href="terms.html">Our Terms</a></li>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about" onclick="closeMenu()">About Me</a></li>
+    <li><a href="#for-you" onclick="closeMenu()">For You</a></li>
+    <li><a href="contact.html" onclick="closeMenu()">Contact Us</a></li>
+    <li><a href="terms.html" onclick="closeMenu()">Our Terms</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -392,6 +408,8 @@ window.addEventListener("scroll",()=>{document.getElementById("nav").classList.t
 document.getElementById("yr").textContent=new Date().getFullYear();
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+function toggleMenu(){document.getElementById('hamburger').classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');}
+function closeMenu(){document.getElementById('hamburger').classList.remove('open');document.getElementById('nav-links').classList.remove('open');}
 </script>
 </body>
 </html>

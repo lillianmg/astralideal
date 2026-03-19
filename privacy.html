@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy · AstralIdeal</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --void:#040a06;--deep:#071009;--ink:#0b1a0e;
+  --emerald:#1a4d2e;--emerald-mid:#2d7a4f;--emerald-bright:#3da668;--emerald-glow:#4ec97e;
+  --gold:#c9a03c;--gold-light:#e2c06a;--gold-pale:#f0d98a;
+  --cream:#f5edd8;--cream-dim:#c8bda0;
+  --font-display:'Cinzel Decorative',serif;--font-title:'Cinzel',serif;--font-body:'Cormorant Garamond',serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--void);color:var(--cream);font-family:var(--font-body);font-size:19px;line-height:1.75;overflow-x:hidden;min-height:100vh;}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:.025;pointer-events:none;z-index:9999;}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--void);}::-webkit-scrollbar-thumb{background:var(--emerald);border-radius:3px;}::-webkit-scrollbar-thumb:hover{background:var(--gold);}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.3rem 4rem;background:rgba(4,10,6,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(201,160,60,.13);}
+.nav-logo{font-family:var(--font-display);font-size:1rem;color:var(--gold-light);text-decoration:none;letter-spacing:.03em;}
+.nav-logo span{color:var(--emerald-bright);}
+.nav-links{display:flex;gap:2.5rem;list-style:none;}
+.nav-links a{font-family:var(--font-title);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--cream-dim);text-decoration:none;transition:color .3s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s;}
+.nav-links a:hover{color:var(--gold-light);}
+.nav-links a:hover::after{transform:scaleX(1);}
+
+/* PAGE BANNER */
+.page-banner{padding:9rem 0 5rem;background:linear-gradient(180deg,var(--void) 0%,var(--ink) 100%);border-bottom:1px solid rgba(201,160,60,.1);position:relative;overflow:hidden;}
+.page-banner::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(29,77,46,.1) 0%,transparent 65%);pointer-events:none;}
+.page-banner-eyebrow{font-family:var(--font-title);font-size:.68rem;letter-spacing:.35em;text-transform:uppercase;color:var(--emerald-bright);margin-bottom:1rem;opacity:0;transform:translateY(16px);animation:fadeUp .9s ease .2s forwards;}
+.page-banner-title{font-family:var(--font-display);font-size:clamp(2.5rem,6vw,4.5rem);color:var(--gold-pale);line-height:1.1;text-shadow:0 0 60px rgba(201,160,60,.22);margin-bottom:.6rem;opacity:0;transform:translateY(24px);animation:fadeUp 1s ease .4s forwards;}
+.page-banner-title em{color:var(--gold-light);font-style:italic;}
+.page-banner-sub{font-family:var(--font-body);font-size:1.1rem;font-style:italic;color:var(--cream-dim);opacity:0;transform:translateY(16px);animation:fadeUp .9s ease .6s forwards;}
+
+/* LAYOUT */
+.container{max-width:1100px;margin:0 auto;padding:0 3rem;}
+.page-main{padding:5rem 0 6rem;background:var(--ink);}
+.back-link{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--font-title);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--emerald-bright);text-decoration:none;margin-bottom:3.5rem;transition:color .3s;}
+.back-link:hover{color:var(--gold-light);}
+.back-link::before{content:'←';font-size:.9rem;}
+
+/* PRIVACY CONTENT */
+.privacy-block-inner{background:rgba(26,77,46,.06);border:1px solid rgba(61,166,104,.12);border-radius:4px;padding:3.5rem;}
+.privacy-eyebrow{font-family:var(--font-title);font-size:.65rem;letter-spacing:.28em;text-transform:uppercase;color:var(--emerald-bright);margin-bottom:1rem;}
+.privacy-block-inner h2{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.5rem);color:var(--gold-light);margin-bottom:.5rem;}
+.ornament{display:flex;align-items:center;gap:1rem;margin:1.5rem 0 2rem;}
+.ornament-line{height:1px;width:60px;background:linear-gradient(to right,transparent,var(--emerald-mid));}
+.ornament-line.r{background:linear-gradient(to left,transparent,var(--emerald-mid));}
+.ornament-diamond{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);}
+.ornament-sm{width:4px;height:4px;background:var(--emerald-bright);transform:rotate(45deg);}
+.privacy-intro{font-size:.95rem;color:var(--cream-dim);margin-bottom:2.5rem;font-style:italic;line-height:1.8;padding-bottom:2rem;border-bottom:1px solid rgba(201,160,60,.1);}
+.privacy-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;}
+.privacy-item h4{font-family:var(--font-title);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--emerald-bright);margin-bottom:.6rem;}
+.privacy-item p{font-size:.92rem;color:var(--cream-dim);line-height:1.78;}
+.privacy-item a{color:var(--emerald-bright);text-decoration:none;}
+.privacy-item a:hover{color:var(--gold-light);}
+
+/* STARS */
+.stars-bg{position:fixed;inset:0;z-index:-1;pointer-events:none;}
+.star{position:absolute;border-radius:50%;}
+
+/* FOOTER */
+footer{background:var(--void);border-top:1px solid rgba(201,160,60,.1);padding:4rem 0 2.5rem;}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.footer-copy{font-size:.8rem;color:rgba(200,189,160,.38);font-style:italic;}
+.footer-legal{display:flex;gap:2rem;}
+.footer-legal a{font-family:var(--font-title);font-size:.63rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(200,189,160,.38);text-decoration:none;transition:color .3s;}
+.footer-legal a:hover{color:var(--gold);}
+
+@keyframes fadeUp{to{opacity:1;transform:translateY(0);}}
+@media(max-width:900px){nav{padding:1.2rem 2rem;}.nav-links{gap:1.5rem;}.privacy-grid{grid-template-columns:1fr;}.container{padding:0 1.5rem;}.page-main{padding:3rem 0 5rem;}.privacy-block-inner{padding:2rem;}}
+@media(max-width:600px){.nav-links{display:none;}.footer-bottom{flex-direction:column;align-items:flex-start;}}
+</style>
+</head>
+<body>
+
+<div class="stars-bg" id="stars-bg"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Astral<span>Ideal</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About Me</a></li>
+    <li><a href="index.html#for-you">For You</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="terms.html">Our Terms</a></li>
+  </ul>
+</nav>
+
+<div class="page-banner">
+  <div class="container">
+    <p class="page-banner-eyebrow">✦ &nbsp; Legal &nbsp; ✦</p>
+    <h1 class="page-banner-title">Privacy <em>Policy</em></h1>
+    <p class="page-banner-sub">How we collect, use, and protect your information.</p>
+  </div>
+</div>
+
+<div class="page-main">
+  <div class="container">
+    <a href="index.html" class="back-link">Back to Home</a>
+    <div class="privacy-block-inner">
+      <p class="privacy-eyebrow">✦ &nbsp; Privacy &nbsp; ✦</p>
+      <h2>Privacy Policy</h2>
+      <div class="ornament">
+        <div class="ornament-line"></div><div class="ornament-sm"></div>
+        <div class="ornament-diamond"></div><div class="ornament-sm"></div>
+        <div class="ornament-line r"></div>
+      </div>
+      <p class="privacy-intro">Effective: <span id="yr2"></span> · AstralIdeal is committed to protecting your personal information and handling it with care, transparency, and respect for your privacy. This policy describes how we collect, use, and safeguard information shared with us.</p>
+      <div class="privacy-grid">
+        <div class="privacy-item">
+          <h4>Information We Collect</h4>
+          <p>When you contact us or book a session, we collect your name, email address, birth date and location (for natal chart work), and any information you voluntarily share in your message or during a session.</p>
+        </div>
+        <div class="privacy-item">
+          <h4>How We Use It</h4>
+          <p>Your information is used solely to provide your requested reading, communicate about scheduling and session details, and send any agreed follow-up materials such as session recordings or written summaries. We do not use your data for marketing without your explicit consent.</p>
+        </div>
+        <div class="privacy-item">
+          <h4>Data Sharing</h4>
+          <p>We do not sell, rent, or share your personal information with third parties for commercial purposes. Trusted service providers such as Zoom and email platforms may process certain data under their own privacy policies and confidentiality obligations.</p>
+        </div>
+        <div class="privacy-item">
+          <h4>Your Rights &amp; Data Retention</h4>
+          <p>We retain your information only as long as necessary to provide services and comply with applicable legal obligations. You may request access to, correction of, or deletion of your data at any time through our <a href="contact.html">contact form</a>. We will respond within 30 days.</p>
+        </div>
+        <div class="privacy-item">
+          <h4>Cookies &amp; Tracking</h4>
+          <p>This website uses no tracking cookies, third-party analytics scripts, or advertising pixels. We do not build behavioral profiles, retarget you, or track your activity across other websites in any way.</p>
+        </div>
+        <div class="privacy-item">
+          <h4>Pennsylvania Residents</h4>
+          <p>Pennsylvania residents may have additional rights under applicable state privacy law. If you have questions about your specific rights or wish to exercise them, please reach out through our <a href="contact.html">contact form</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom">
+      <p class="footer-copy">© <span id="yr"></span> AstralIdeal · For entertainment &amp; personal reflection · Not a licensed professional service</p>
+      <div class="footer-legal">
+        <a href="index.html">Home</a>
+        <a href="terms.html">Our Terms</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(function(){
+  const bg = document.getElementById('stars-bg');
+  for (let i = 0; i < 160; i++) {
+    const s = document.createElement(

@@ -418,8 +418,18 @@ window.addEventListener("scroll",()=>{document.getElementById("nav").classList.t
 document.getElementById("yr").textContent=new Date().getFullYear();
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');});},{threshold:.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-function toggleMenu(){document.getElementById('hamburger').classList.toggle('open');document.getElementById('nav-links').classList.toggle('open');}
-function closeMenu(){document.getElementById('hamburger').classList.remove('open');document.getElementById('nav-links').classList.remove('open');}
+
+
+</script>
+<script>
+function toggleMenu(){
+  document.getElementById('hamburger').classList.toggle('open');
+  document.getElementById('nav-links').classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('nav-links').classList.remove('open');
+}
 </script>
 </body>
 </html>

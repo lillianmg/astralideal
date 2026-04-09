@@ -98,13 +98,25 @@ footer{background:var(--void);border-top:1px solid rgba(201,160,60,.1);padding:4
 
 @media(max-width:900px){nav{padding:1.2rem 2rem;}.nav-links{gap:1.5rem;}.contact-grid{grid-template-columns:1fr;gap:3rem;}.field-row{grid-template-columns:1fr;}.container{padding:0 1.5rem;}section{padding:5rem 0;}}
 @media(max-width:600px){.footer-bottom{flex-direction:column;align-items:flex-start;}}
-/* HAMBURGER */
-.hamburger{display:flex;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:200;}
+
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:200;}
 .hamburger span{display:block;width:24px;height:1.5px;background:var(--gold-light);transition:transform .3s,opacity .3s;}
 .hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
 .hamburger.open span:nth-child(2){opacity:0;}
 .hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
 @media(max-width:600px){.hamburger{display:flex;}.nav-links{display:flex !important;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(4,10,6,.97);backdrop-filter:blur(20px);align-items:center;justify-content:center;gap:2.5rem;transform:translateX(100%);transition:transform .4s ease;z-index:150;}.nav-links.open{transform:translateX(0);}.nav-links a{font-size:1rem;letter-spacing:.2em;}}
+/* HAMBURGER */
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;z-index:999999;position:fixed;top:1.1rem;right:1.5rem;}
+.hamburger span{display:block;width:26px;height:2px;background:var(--gold-light);transition:transform .3s,opacity .3s;border-radius:2px;}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+@media(max-width:900px){
+  .hamburger{display:flex;}
+  .nav-links{display:flex;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(4,10,6,.98);backdrop-filter:blur(20px);align-items:center;justify-content:center;gap:2.5rem;transform:translateX(100%);transition:transform .4s ease;z-index:99999;pointer-events:none;}
+  .nav-links.open{transform:translateX(0);pointer-events:all;}
+  .nav-links a{font-size:1.1rem;letter-spacing:.2em;}
+}
 </style>
 </head>
 <body>
@@ -120,14 +132,16 @@ footer{background:var(--void);border-top:1px solid rgba(201,160,60,.1);padding:4
     <li><a href="contact.html" class="active">Contact Us</a></li>
     <li><a href="terms.html" onclick="closeMenu()">Our Terms</a></li>
   </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
 </nav>
+<button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+  <span></span><span></span><span></span>
+</button>
 
 <!-- PAGE BANNER -->
 <div class="page-banner">
   <div class="container">
-    <p class="page-banner-eyebrow">✦ &nbsp; Get in Touch &nbsp; ✦</p>
-    <h1 class="page-banner-title">Let's begin<br><em>your journey</em></h1>
+    <p class="page-banner-eyebrow">✦ &nbsp; Reach Out &nbsp; ✦</p>
+    <h1 class="page-banner-title">Let's begin<br><em>your reading</em></h1>
     <p class="page-banner-sub">A private, considered space: just for you.</p>
   </div>
 </div>

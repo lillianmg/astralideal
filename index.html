@@ -24,7 +24,7 @@ body::before{content:'';position:fixed;inset:0;background-image:url("data:image/
 ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--void);}::-webkit-scrollbar-thumb{background:var(--emerald);border-radius:3px;}::-webkit-scrollbar-thumb:hover{background:var(--gold);}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:99998;display:flex;align-items:center;justify-content:space-between;padding:1.3rem 4rem;transition:background .5s,backdrop-filter .5s
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.3rem 4rem;transition:background .5s,backdrop-filter .5s;}
 nav.scrolled{background:rgba(4,10,6,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(201,160,60,.15);}
 .nav-logo{font-family:var(--font-display);font-size:1rem;color:var(--gold-light);text-decoration:none;letter-spacing:.03em;}
 .nav-logo span{color:var(--emerald-bright);}
@@ -75,8 +75,8 @@ section{position:relative;padding:8rem 0;}
 .cred-label{font-family:var(--font-title);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--emerald-mid);display:block;margin-top:.25rem;}
 
 /* FOR YOU */
-#for-you{background:var(--deep);}
-#for-you::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(29,77,46,.16) 0%,transparent 70%);pointer-events:none;z-index:0;}
+#for-you{background:var(--deep);overflow:hidden;}
+#for-you::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(29,77,46,.16) 0%,transparent 70%);pointer-events:none;}
 .for-you-intro{max-width:620px;margin-bottom:5rem;}
 .for-you-intro p{font-size:1.18rem;color:var(--cream-dim);line-height:1.85;font-style:italic;}
 .services-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
@@ -128,7 +128,7 @@ footer{background:var(--void);border-top:1px solid rgba(201,160,60,.1);padding:5
 @media(max-width:600px){.footer-top{grid-template-columns:1fr;}.footer-bottom{flex-direction:column;align-items:flex-start;}}
 
 /* HAMBURGER */
-.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:99999;position:relative;}
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:200;}
 .hamburger span{display:block;width:24px;height:1.5px;background:var(--gold-light);transition:transform .3s,opacity .3s;}
 .hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
 .hamburger.open span:nth-child(2){opacity:0;}
@@ -151,11 +151,10 @@ footer{background:var(--void);border-top:1px solid rgba(201,160,60,.1);padding:5
     <li><a href="contact.html" onclick="closeMenu()">Contact Us</a></li>
     <li><a href="terms.html" onclick="closeMenu()">Our Terms</a></li>
   </ul>
-  
+  <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
-<button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
-  <span></span><span></span><span></span>
-</button>
 
 <!-- HERO -->
 <section id="hero">
